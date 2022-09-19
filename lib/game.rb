@@ -1,4 +1,5 @@
 require_relative 'player_creator'
+require_relative 'board'
 
 class Game
 
@@ -12,9 +13,9 @@ class Game
     end
 
     def start
-        Board.initialize
-        Board.dealBoard
-        
+        @deck = Board.initialize
+        @board = Board.dealBoard
+
     end
 
 end
