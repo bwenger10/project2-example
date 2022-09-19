@@ -12,6 +12,9 @@ class Game
     end
 
     def start
+        Board.initialize
+        Board.dealBoard
+        
     end
 
 end
