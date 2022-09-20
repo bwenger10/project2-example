@@ -12,10 +12,12 @@ class Game
         puts "Welcome #{@players.join(' and ')}"
     end
 
-    def start
-        @deck = Board.initialize
-        @board = Board.dealBoard
-
+    def start 
+        @board = Board.new
+        @board.dealBoard
+        #board.each do |i|
+         #   puts "#{i}"
+        #end
     end
 
 end

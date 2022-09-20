@@ -1,15 +1,23 @@
 require_relative 'deck'
+require_relative 'card'
 class Board
     def initialize
-        @deck = Deck.initialize
+        @board = Array.new
+        @deck = Deck.new
+        @deck.printDeck
     end
 
     def dealBoard
-        board = Array.new(12, Card)
-        board.card.each do |i|
-            board[i] = @deck.sample(1)
-            board[i].status = true
-            puts "#{board[i]}"
+        @deck.fillDeck
+        i = 0
+        loop do
+            i = i + 1
+            @board << @deck.pullCard
+            #puts "card added to board\n"
+            puts "#{@board[i-1].getCard}"
+            if i == 12
+                break
+            end
         end
     end
 

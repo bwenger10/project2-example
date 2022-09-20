@@ -7,6 +7,12 @@ class Card
         @status = false
     end
 
+    def changeStatus(card)
+        card.status = !card.status
+    end
 
+    def getCard
+        "#{@color}, #{@shape}, #{@fill}, #{@num}"
+    end
 
 end
