@@ -4,7 +4,6 @@ class Card
         @shape = shape
         @fill = fill
         @num = num
-        @status = false
     end
 
     def changeStatus(card)
@@ -13,6 +12,22 @@ class Card
 
     def getCard
         "#{@color}, #{@shape}, #{@fill}, #{@num}"
+    end
+
+    def getColor
+        "#{@color}"
+    end
+
+    def getShape
+        "#{@shape}"
+    end
+
+    def getFill
+        "#{@fill}"
+    end
+
+    def getNum
+        "#{@num}"
     end
 
 end
