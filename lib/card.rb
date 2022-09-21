@@ -1,4 +1,5 @@
 class Card
+    #initialization
     def initialize(color, shape, fill, num)
         @color = color
         @shape = shape
@@ -6,9 +7,7 @@ class Card
         @num = num
     end
 
-    def changeStatus(card)
-        card.status = !card.status
-    end
+    #getter methods
 
     def getCard
         "#{@color}, #{@shape}, #{@fill}, #{@num}"

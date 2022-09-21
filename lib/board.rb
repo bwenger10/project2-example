@@ -1,34 +1,30 @@
 require_relative 'deck'
 require_relative 'card'
 class Board
+    #initialization
     def initialize
         @board = Array.new
         @deck = Deck.new
         @deck.printDeck
     end
-
+    #deal the game board
     def dealBoard
         @deck.fillDeck
         i = 0
         loop do
             i = i + 1
             @board << @deck.pullCard
-            #puts "card added to board\n"
-            #puts "#{@board[i-1].getCard}"
             if i == 12
                 break
             end
         end
     end
-
-    def drawNewCards(ind1, ind2, ind3)
-        
-        @board.insert(ind1) << @deck.pullCard
-        @board.insert(ind2) << @deck.pullCard
-        @board.insert(ind3) << @deck.pullCard
-        
+    #grab a new card from deck for the board
+    def drawNewCard(ind)
+        @board.delete_at(ind)
+        @board.insert(ind) << @deck.pullCard
     end
-
+    #output board to console
     def printBoard
         i = 0
         loop do
@@ -39,7 +35,7 @@ class Board
             end
         end
     end
-
+    #getter methods
     def getGuessColor(index)
         @board[index].getColor
     end
