@@ -26,3 +26,5 @@ After the card guesses are sent through the console, the program will determine 
 If a set is found, the player who found the set will get 1 point towards their total score
 
 The program will ask after every turn if the users wish to keep playing or not.
+
+We spoke in class 9/21, I forked the repository wrong and took it from the main class repo instead of my dot number repo by accident. You won't see my commits but I can send you a screen shot if needed. Sorry for the inconvenience.
